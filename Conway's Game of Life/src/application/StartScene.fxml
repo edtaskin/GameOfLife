@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StartSceneController">
+   <top>
+      <Label id="startSceneLabel" fx:id="titleLabel" alignment="CENTER" text="Conway's Game of Life" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="optionalHBox1" layoutX="70.0" layoutY="178.0">
+               <children>
+                  <Label text="Enter custom grid size: " textFill="WHITE" />
+                  <TextField fx:id="gridSizeTextField" prefHeight="19.0" prefWidth="102.0" promptText="e.g. 50x40" />
+               </children>
+            </HBox>
+            <HBox fx:id="optionalHBox2" layoutX="70.0" layoutY="223.0">
+               <children>
+                  <ToggleButton fx:id="toggleFadeModeButton" mnemonicParsing="false" text="Toggle Fade Mode" />
+                  <Label alignment="CENTER" prefHeight="23.0" prefWidth="180.0" text="You can also toggle in game." textFill="WHITE" />
+               </children>
+            </HBox>
+            <Button fx:id="startButton" layoutX="61.0" layoutY="82.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="77.0" text="START" />
+            <Button fx:id="optionalSettingsButton" layoutX="249.0" layoutY="86.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="113.0" text="Optional Settings" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <Region prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Region prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
